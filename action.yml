@@ -1,0 +1,20 @@
+name: 'puppeteer-based-github-action-example'
+description: 'Upload your extension to Opera Addons'
+author: 'cardinalby'
+inputs:
+  url:
+    description: 'Url to go'
+    required: true
+  selector:
+    description: 'selector to find'
+    required: true
+outputs:
+  elementText:
+    description: 'Output example, element text'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    # Dockerfile-based actions have inputs env variables without "INPUT_" prefix
+    INPUT_URL: ${{ inputs.url }}
+    INPUT_SELECTOR: ${{ inputs.selector }}

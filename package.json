@@ -1,0 +1,21 @@
+{
+  "name": "puppeteer-based-github-action-example",
+  "version": "1.0.0",
+  "private": false,
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "action": "node dist/main.js"
+  },
+  "author": "cardinalby",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "puppeteer": "3.3.0"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^3.0.1",
+    "@types/node": "^12.7.12",
+    "typescript": "^3.6.4"
+  }
+}
